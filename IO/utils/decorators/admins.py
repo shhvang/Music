@@ -44,7 +44,7 @@ def AdminActual(mystic):
                     [
                         InlineKeyboardButton(
                             text="How to Solve?",
-                            callback_data="AnonymousAdmin",
+                            callback_data="AnAdmin",
                         ),
                     ]
                 ]
@@ -159,12 +159,7 @@ def AdminRightsCheck(mystic):
                     if message.from_user.id not in admins:
                         if await is_skipmode(message.chat.id):
                             upvote = await get_upvote_count(chat_id)
-                            text = f"""Admin Rights Required
-
-Refresh admin cache by : /reload
-
-{upvote} votes needed to perform this action"""
-
+                            text = f"""Admin Rights Required\nRefresh admin cache by : /reload\n{upvote} votes needed to perform this action"""
                             command = message.command[0]
                             if command[0] == "c":
                                 command = command[1:]

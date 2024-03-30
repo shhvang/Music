@@ -16,6 +16,7 @@ from config import BANNED_USERS
 @app.on_message(
     filters.command(["skip", "cskip", "next", "cnext"]) & filters.group & ~BANNED_USERS
 )
+@app.on_message(filters.command('O skip', prefixes='I') & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def skip(cli, message: Message, _, chat_id):
     if not len(message.command) < 2:

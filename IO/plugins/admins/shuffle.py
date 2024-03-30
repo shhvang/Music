@@ -13,6 +13,7 @@ from config import BANNED_USERS
 @app.on_message(
     filters.command(["shuffle", "cshuffle"]) & filters.group & ~BANNED_USERS
 )
+@app.on_message(filters.command('O shuffle', prefixes='I') & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def admins(Client, message: Message, _, chat_id):
     check = db.get(chat_id)

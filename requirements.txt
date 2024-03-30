@@ -25,3 +25,4 @@ yt-dlp
 youtube-search
 youtube-search-python
 telegraph==2.2.0
+uvloop

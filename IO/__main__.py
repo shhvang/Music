@@ -1,8 +1,6 @@
 import asyncio
 import importlib
 
-import uvloop
-
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
@@ -33,7 +31,6 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    uvloop.install()
     await sudo()
     await app.start()
     for all_module in ALL_MODULES:

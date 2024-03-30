@@ -33,7 +33,7 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    await uvloop.install()
+    uvloop.install()
     await sudo()
     await app.start()
     for all_module in ALL_MODULES:

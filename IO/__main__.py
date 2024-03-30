@@ -1,7 +1,7 @@
 import asyncio
 import importlib
 
-from uvloop import install
+import uvloop
 
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
@@ -33,6 +33,7 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
+    await uvloop.install()
     await sudo()
     await app.start()
     for all_module in ALL_MODULES:
@@ -56,8 +57,6 @@ async def init():
     await idle()
     await app.stop()
     LOGGER("IO").info("Stopping IO Music Bot...")
-
-install()
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())

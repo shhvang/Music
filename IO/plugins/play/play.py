@@ -124,7 +124,7 @@ async def play_commnd(
                 return await mystic.edit_text(
                     _["play_7"].format(f"{' | '.join(formats)}")
                 )
-        if video_telegram.file_size > config.TG_VIDEO_FILESIZE_LIMIT:
+        if video_telegram.file_size > config.VIDEO_FILESIZE_LIMIT:
             return await mystic.edit_text(_["play_8"])
         file_path = await Telegram.get_filepath(video=video_telegram)
         if await Telegram.download(_, message, mystic, file_path):

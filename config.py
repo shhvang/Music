@@ -14,7 +14,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # Telegram credentials
 OWNER_ID = int(getenv("OWNER_ID", 5552153244))
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/IOUpdate")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/IOSupportGroup")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/IOSupportChat")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "https://t.me/IOLogs"))
 
 # Bot Settings

@@ -51,8 +51,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("IOSupportGroup")
-                await self.one.join_chat("IOChats")
+                await self.one.join_chat("IOSupportChat")
+                await self.one.join_chat("Chatbeings")
                 await self.one.join_chat("IOpacity")
             except:
                 pass
@@ -73,8 +73,8 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("IOSupportGroup")
-                await self.two.join_chat("IOChats")
+                await self.two.join_chat("IOSupportChat")
+                await self.two.join_chat("Chatbeings")
                 await self.two.join_chat("IOpacity")
             except:
                 pass
@@ -95,8 +95,8 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("IOSupportGroup")
-                await self.three.join_chat("IOChats")
+                await self.three.join_chat("IOSupportChat")
+                await self.three.join_chat("Chatbeings")
                 await self.three.join_chat("IOpacity")
             except:
                 pass
@@ -117,8 +117,8 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("IOSupportGroup")
-                await self.four.join_chat("IOChats")
+                await self.four.join_chat("IOSupportChat")
+                await self.four.join_chat("Chatbeings")
                 await self.four.join_chat("IOpacity")
             except:
                 pass
@@ -139,8 +139,8 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("IOSupportGroup")
-                await self.five.join_chat("IOChats")
+                await self.five.join_chat("IOSupportChat")
+                await self.five.join_chat("Chatbeings")
                 await self.five.join_chat("IOpacity")
             except:
                 pass

@@ -22,13 +22,13 @@ def help_pannel(_, START: Union[bool, int] = None):
                     callback_data="help_callback admin",
                 ),
                 InlineKeyboardButton(
-                    text=_["Sudo"],
+                    text="Sudo",
                     callback_data="help_callback sudo",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=_["User"],
+                    text="User",
                     callback_data="help_callback user",
                 ),
             ],

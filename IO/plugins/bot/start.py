@@ -34,7 +34,11 @@ async def start_pm(client, message: Message, _):
             keyboard = help_pannel(_)
             return await message.reply_photo(
                 photo=config.START_IMAGE,
-                caption=_["help_1"].format(config.SUPPORT_CHAT),
+                caption=("""
+Introducing IO.Music – your streaming solution for Telegram Voice Chats. Simply add IO.Music and elevate your audio and video experiences effortlessly.
+
+Support Chat / @IOSupportChat
+"""),
                 reply_markup=keyboard,
             )
         if name[0:3] == "sud":
@@ -42,7 +46,7 @@ async def start_pm(client, message: Message, _):
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOG_GROUP_ID,
-                    text=f"{message.from_user.mention} just started the bot to check <b>Sudolist</b>.\n\n<b>User ID /</b> <code>{message.from_user.id}</code>\n<b>Username /</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} started the bot to check <b>Sudolist</b>.\n\n<b>User ID /</b> <code>{message.from_user.id}</code>\n<b>Username /</b> @{message.from_user.username}",
                 )
             return
         if name[0:3] == "inf":
@@ -87,15 +91,10 @@ async def start_pm(client, message: Message, _):
         await message.reply_photo(
             photo=config.START_IMAGE,
             caption=("""
-Hi {0}
-<b>Welcome to IO.Music</b>
-powered by @iOpacity
+Introducing IO.Music – your streaming solution for Telegram Voice Chats. Simply add IO.Music and elevate your audio and video experiences effortlessly.
 
-I am a strong VC music streaming bot running on a high-speed server.
-Add me for a seamless music experience in VCs </>
-
-Check commands to get information about my modules 🌱
-""").format(message.from_user.mention),
+Support Chat / @IOSupportChat
+"""),
             reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(2):
@@ -113,15 +112,10 @@ async def start_gp(client, message: Message, _):
     await message.reply_photo(
         photo=config.START_IMAGE,
         caption=("""
-Hi {0}
-<b>Welcome to IO.Music</b>
-powered by @iOpacity
+Introducing IO.Music – your streaming solution for Telegram Voice Chats. Simply add IO.Music and elevate your audio and video experiences effortlessly.
 
-I am a strong VC music streaming bot running on a high-speed server.
-Add me for a seamless music experience in VCs </>
-
-Check commands to get information about my modules 🌱
-""").format(message.from_user.mention),
+Support Chat / @IOSupportChat
+"""),
             reply_markup=InlineKeyboardMarkup(out),
     )
     return await add_served_chat(message.chat.id)

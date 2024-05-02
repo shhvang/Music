@@ -12,7 +12,7 @@ from IO.utils.database import (
 )
 
 
-@app.on_message(filters.command(["activevc", "activevoice"]) & SUDOERS)
+@app.on_message(filters.command(["activevc", "activevoice", "active"]) & SUDOERS)
 async def activevc(_, message: Message):
     mystic = await message.reply_text("Getting voicechats list...")
     served_chats = await get_active_chats()
@@ -30,7 +30,7 @@ async def activevc(_, message: Message):
                 text += f"<b>{j + 1}.</b> <a href=https://t.me/{user}>{unidecode(title).upper()}</a> [<code>{x}</code>]\n"
             else:
                 text += (
-                    f"<b>{j + 1}.</b> {unidecode(title).upper()} [<code>{x}</code>]\n"
+                    f"<b>{j + 1}.</b> {unidecode(title)} [<code>{x}</code>]\n"
                 )
             j += 1
         except:
@@ -62,7 +62,7 @@ async def activevi_(_, message: Message):
                 text += f"<b>{j + 1}.</b> <a href=https://t.me/{user}>{unidecode(title).upper()}</a> [<code>{x}</code>]\n"
             else:
                 text += (
-                    f"<b>{j + 1}.</b> {unidecode(title).upper()} [<code>{x}</code>]\n"
+                    f"<b>{j + 1}.</b> {unidecode(title)} [<code>{x}</code>]\n"
                 )
             j += 1
         except:

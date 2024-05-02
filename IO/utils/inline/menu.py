@@ -18,72 +18,18 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text=_["ADMINP"],
-                    callback_data="help_callback hb1",
+                    text="Admin",
+                    callback_data="help_callback admin",
                 ),
                 InlineKeyboardButton(
-                    text=_["AUTHP"],
-                    callback_data="help_callback hb2",
-                ),
-                InlineKeyboardButton(
-                    text=_["BROADP"],
-                    callback_data="help_callback hb3",
+                    text=_["Sudo"],
+                    callback_data="help_callback sudo",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=_["BLCP"],
-                    callback_data="help_callback hb4",
-                ),
-                InlineKeyboardButton(
-                    text=_["BLUP"],
-                    callback_data="help_callback hb5",
-                ),
-                InlineKeyboardButton(
-                    text=_["CPLAYP"],
-                    callback_data="help_callback hb6",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text=_["GBANP"],
-                    callback_data="help_callback hb7",
-                ),
-                InlineKeyboardButton(
-                    text=_["LOOPP"],
-                    callback_data="help_callback hb8",
-                ),
-                InlineKeyboardButton(
-                    text=_["IOP"],
-                    callback_data="help_callback hb9",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text=_["PINGP"],
-                    callback_data="help_callback hb10",
-                ),
-                InlineKeyboardButton(
-                    text=_["PLAYP"],
-                    callback_data="help_callback hb11",
-                ),
-                InlineKeyboardButton(
-                    text=_["SHUFFLEP"],
-                    callback_data="help_callback hb12",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text=_["SEEKP"],
-                    callback_data="help_callback hb13",
-                ),
-                InlineKeyboardButton(
-                    text=_["SONGP"],
-                    callback_data="help_callback hb14",
-                ),
-                InlineKeyboardButton(
-                    text=_["SPEEDP"],
-                    callback_data="help_callback hb15",
+                    text=_["User"],
+                    callback_data="help_callback user",
                 ),
             ],
             mark,

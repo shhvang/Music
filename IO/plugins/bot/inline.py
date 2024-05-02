@@ -45,7 +45,7 @@ async def inline_query_handler(client, query):
             searched_text = f"""
 <b>Title :</b> <a href={link}>{title}</a>
 
-<b>Duration :</b> {duration} ᴍɪɴᴜᴛᴇs
+<b>Duration :</b> {duration} minutes
 <b>Views :</b> <code>{views}</code>
 <b>Channel :</b> <a href={channellink}>{channel}</a>
 <b>Published On :</b> {published}

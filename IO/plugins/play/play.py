@@ -207,7 +207,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "spplay"
-                img = config.SPOTIFY_PLAY_IMAGE
+                img = config.SPOTIFY_PLAYLIST_IMAGE
                 cap = _["play_11"].format(app.mention, message.from_user.mention)
             elif "album" in url:
                 try:

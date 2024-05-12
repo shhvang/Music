@@ -6,7 +6,7 @@ from config import OWNER_ID
 @app.on_message(filters.group & filters.text & filters.regex(r"@admins"))
 def mention_admins(client, message):
     # Get the list of admins in the group
-    admins = client.get_chat_members(message.chat.id, filter="administrators")
+    admins = client.get_chat_members(message.chat.id, filter=filters.administrators)
 
     # Create a mention text or hyperlink for each admin
     mentions = [f"[{admin.user.first_name}](tg://user?id={admin.user.id})" for admin in admins]
